@@ -38,5 +38,5 @@ func (s *MonsterCoreSuite) TestTotalSupply(c *C) {
 	c.Assert(ok, Equals, true)
 	c.Assert(token_session, NotNil)
 	ret, _ := token_session.TotalSupply()
-	c.Assert(ret, Equals, big.NetInt(0))
+	c.Assert(ret.Text(10), Equals, "0")
 }
