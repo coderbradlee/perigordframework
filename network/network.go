@@ -92,7 +92,7 @@ func Dial(name string) (*Network, error) {
 			rpc_client: rpc_client,
 			client:     client,
 			keystore:   ks,
-			passphrase: config.passphrase,
+			passphrase: config.pass,
 		}
 
 		return ret, nil
