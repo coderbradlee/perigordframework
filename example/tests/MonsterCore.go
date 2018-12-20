@@ -7,6 +7,7 @@ import (
 	"github.com/polyswarm/perigord/network"
 	"github.com/polyswarm/perigord/testing"
 
+	"math/big"
 	"perigord/bindings"
 )
 
@@ -30,12 +31,12 @@ func (s *MonsterCoreSuite) SetUpTest(c *C) {
 // }
 
 // USER TESTS GO HERE
-func (s *MonsterCoreSuite) TestName(c *C) {
+func (s *MonsterCoreSuite) TestTotalSupply(c *C) {
 	session := contract.Session("MonsterCore")
 	c.Assert(session, NotNil)
 	token_session, ok := session.(*bindings.MonsterCoreSession)
 	c.Assert(ok, Equals, true)
 	c.Assert(token_session, NotNil)
 	ret, _ := token_session.TotalSupply()
-	c.Assert(ret, Equals, 0)
+	c.Assert(ret, Equals, big.NetInt(0))
 }
