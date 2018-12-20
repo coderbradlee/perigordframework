@@ -9,10 +9,10 @@ import (
 	"context"
 	"fmt"
 	"github.com/polyswarm/perigord/contract"
+	"github.com/polyswarm/perigord/example/bindings"
 	"github.com/polyswarm/perigord/migration"
 	"github.com/polyswarm/perigord/network"
 	"log"
-	"perigord/bindings"
 	// "perigord/migrations"
 )
 
