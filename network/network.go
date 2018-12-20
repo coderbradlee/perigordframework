@@ -15,7 +15,7 @@ package network
 
 import (
 	"errors"
-	"fmt"
+	// "fmt"
 	"path/filepath"
 
 	"github.com/ethereum/go-ethereum/accounts"
@@ -28,8 +28,7 @@ import (
 	"github.com/spf13/viper"
 
 	"github.com/polyswarm/perigord/project"
-
-	"golang.org/x/crypto/ssh/terminal"
+	// "golang.org/x/crypto/ssh/terminal"
 )
 
 type NetworkConfig struct {
@@ -71,6 +70,7 @@ type Network struct {
 	rpc_client *rpc.Client
 	client     *ethclient.Client
 	keystore   *keystore.KeyStore
+	passphrase string
 }
 
 func Dial(name string) (*Network, error) {
