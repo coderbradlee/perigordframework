@@ -3,8 +3,8 @@ package main
 import (
 	"testing"
 
-	_ "perigord/tests"
-	_ "perigord/migrations"
+	// _ "perigord/tests"
+	// _ "perigord/migrations"
 	. "gopkg.in/check.v1"
 )
 
